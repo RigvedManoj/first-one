@@ -1,0 +1,31 @@
+#include <iostream.h>
+#include <conio.h>
+int main()
+{
+    int a[10], i, j, k, temp;
+    cout<<"enter the elements\n";
+    for (i = 0; i < 10; i++)
+    {
+        cin>>a[i];
+    }
+    for (i = 1; i < 10; i++)
+    {
+        for (j = i; j >= 1; j--)
+        {
+            if (a[j] < a[j-1])
+            {
+                temp = a[j];
+                a[j] = a[j-1];
+                a[j-1] = temp;
+            }
+            else
+                break;
+        }
+    }
+    cout<<"sorted array\n"<<endl;
+    for (k = 0; k < 10; k++)
+    {
+	cout<<a[k]<<endl;
+    }
+    getch();
+}
